@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <title>Buksi</title>
+</head>
+
+<body onload="perguntaNome()">
+
+    <header class="cabecalho">
+        <img src="img/buski-logo-verde 1.png" />
+    </header>
+
+    <article class="resumo">
+        <header>
+            <div>
+                <h1 class="bold">Olá, <mark id="nome">Pessoa</mark></h1>
+                <p>Vamos checar seus hábitos de leitura?</p>
+                <p class="esm">Veja aqui seus hábitos de leitura e metas de hoje</p>
+            </div>
+            <div>
+                <p class="md">Você já leu <mark id="total_paginas_lidas">x</mark> páginas hoje</p>
+                <p class="md">Você ainda tem <mark id="paginas_faltantes">x</mark> páginas pela frente</p>
+            </div>
+            <p class="mark lg bold">Você já atingiu <mark class="elg" id="campo_porcentagem">x%</mark> da sua meta</p>
+        </header>
+
+        <section>
+            <img src="img/ilustração_lendo 1.png" />
+        </section>
+    </article>
+
+    <article class="formulario">
+        <header>
+            <h1>Adicione um livro a sua biblioteca</h1>
+        </header>
+
+        <form>
+            <input id="titulo" required type="text" placeholder="Nome do Livro" />
+            <input id="autor" required type="text" placeholder="Nome do Autor" />
+            <input id="capa_livro" type="url" placeholder="Imagem da Capa do Livro" />
+            <fieldset>
+                <label for="paginas_lidas">Páginas Lidas</label>
+                <br />
+                <input required type="number" id="paginas_lidas" />
+            </fieldset>
+            <fieldset>
+                <label for="total_paginas">Total de páginas</label>
+                <br />
+                <input required type="number" id="total_paginas" />
+            </fieldset>
+            <button type="submit" onclick="adicionaLivro()">Adicionar livro</button>
+        </form>
+    </article>
+
+    <section class="biblioteca">
+    <header>
+        <h1>Sua Biblioteca</h1>
+        <p>Olhe o panorama de suas leituras, em curso ou concluidas!</p>
+    </header>
+
+    <section>
+        <h2>Lendo</h2>
+        <section id="lista_livros_nao_lidos" class="biblioteca-livros">
+            <article class="livro">
+                <img src="https://m.media-amazon.com/images/I/41qGwMHRWxL.jpg" />
+                <h1>Senhor dos Anéis</h1>
+                <p>J. R. R. Tolkien</p>
+
+                <input type="range" />
+                <button class="botao-simples-texto">X Deletar livro</button>
+                <p class="porcentagem">86%</p>
+            </article>
+        </section>  
+    </section>
+</section>
+
+    <section>
+        <h2>Lidos</h2>
+        <section id="lista_livros_lidos" class="biblioteca-livros">
+
+        </section>
+        
+    </section>
+
+</body>
+<script src="main.js"></script>
+</html>
